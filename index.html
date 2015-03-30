@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>(Un)bounded</title>
+    
+    <!--JQUERY-->
+    <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- bxSlider-->
+    <script src="js/bxslider/bxslider.min.js"></script>
+    <link href="js/bxslider/bxslider.css" rel="stylesheet">
+    
+    <style>
+        h4 {font-size: 22px;}
+        #thesis {
+            position: absolute;
+            right: 0;
+            z-index: 9;
+        }
+        #thesis h5 {font-size: 16px;}
+        #biblio {font-size: 12px;}
+        .chapter {
+            margin-top: 35vh;
+            padding-bottom: 30vh;
+            border-bottom: 1px solid #EBEBEB;
+        }
+        .chapter h1, h2, h3, h4 {
+            text-align: center;
+            margin-right: 20%;
+            margin-left: 20%;
+        }
+        
+        .section h4 {
+            margin-top: 100px;
+            margin-bottom: 50px
+        }
+        .section p {
+            padding-left: 15vw;
+            padding-right: 15vw;
+            font-size: 16px;
+        }
+        
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            height: 100vh;
+            overflow: scroll;
+        }
+        .sections {
+            list-style-type: none;
+            color: #999;
+            background: #fff;
+            text-decoration: none;
+        }
+        .panel-body {padding: 0px;}
+        .nav li a {padding: 5px 5px 5px 10px;}
+        .panel-title {margin: 0px;}
+        
+        img {max-height: 100vh; max-width: 75vw;}
+        iframe {height: 80vh; width: 75vw; border: none;}
+        .figure {text-align: center; margin: 50px auto; border-top: 1px; border-bottom: 1px;}
+        .figure div {
+            width: 75vw;
+            margin: 50px auto;
+        }
+        
+        .nav-tabs {list-style-type: none; text-decoration: none; padding: 5px;}
+        
+        .tabby {margin-left: 25vw; margin-right: auto; width: 80%}
+        .tabby img {align: left;}
+        .linky {color: #337ab7}
+        .linky:hover {
+            text-decoration: underline;
+            color: #23527c;
+        }
+        
+        
+
+    </style>
+    
+</head>
+
+<body>
+    
+<!-- NAV STARTS HERE-->
+    <div class="col-md-3 side-nav">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading0">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="bodySize()" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                  Table of Contents
+                </a>
+              </h4>
+            </div>
+            <div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading0">
+              <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Introduction </br> MAPPING IT ALL OUT
+                          </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                    <ul class="sections nav">
+                        <li><a href="#00">Preface</a></li>
+                        <li><a href="#0">MAPPING IT ALL OUT</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      1 </br>CARTOGRAPHY AND THE CREATION OF THE BORDER
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class= "panel-body">
+                    <ul class="sections nav">
+                        <li><a href="#1">CARTOGRAPHY AND THE CREATION OF THE BORDER</a></li>
+                        <li><a href="#1-1">What is "The Border"?</a></li>
+                        <li><a href="#1-2">Sovereignty: Not as Simple As You Think</a></li>
+                        <li><a href="#1-3">The Power of Maps</a></li>
+                        <li><a href="#1-4">The Rise of Nation-States and The Rise of Cartography</a></li>
+                        <li><a href="#1-5">Counter Cartography</a></li>
+                        <li><a href="#1-6">Drawing and Interpreting Lines</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    2</br> UNDERSTANDING "THE BORDER"
+                  </a>
+                </h4>
+              </div>
+                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <ul class="sections nav">
+                        <li><a href="#2">UNDERSTANDING "THE BORDER"</a></li>
+                        <li><a href="#2-1">Border As Wall</a></li>
+                        <li><a href="#2-2">Border Regime</a></li>
+                        <li><a href="#2-3">No Border</a></li>
+                        <li><a href="#2-4">Border Externallization</a></li>
+                        <li><a href="#2-5">Border as Experienced/Performed</a></li>
+                        <li><a href="#2-6">Conclusion</a></li>
+                    </ul>  
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                 <div class="panel-heading" role="tab" id="headingFour">
+                   <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                       3 </br>REPRESENTING "THE BORDER"
+                    </a>
+                   </h4>
+                 </div>
+                 <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                      <ul class="sections nav">
+                          <li><a href="#3">REPRESENTING "THE BORDER"</a></li>
+                          <li><a href="#3-1">An Intro to Digital Geovisualization</a></li>
+                          <li><a href="#3-2">Mapping Temporally Dynamic Borders</a></li>
+                          <li><a href="#3-3">Mapping Spatially Concurrent Borders</a></li>
+                          <li><a href="#3-4">Exploring and Creating New Border Landscapes</a></li>
+                          <li><a href="#3-5">Mapping the Performed Border</a></li>
+                          <li><a href="#3-6">Mapping Non-Cartesian Borders</a></li>
+                          <li><a href="#3-7">Conclusion</a></li>
+                      </ul>
+                    </div>
+                 </div>    
+               </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFive">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Conclusion </br>SO THEN, WHAT <i>IS</i> THE BORDER?
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+                    <div class="panel-body">
+                      <ul class="sections nav">
+                          <li><a href="#4">SO THEN, WHAT <i>IS</i> THE BORDER? </a></li>
+                      </ul>
+                    </div>
+                  </div>    
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSix">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Bibliography
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+                    <div id="biblio" class="panel-body" style="max-height: 80vh; overflow-y: scroll;">
+                    </div>
+                  </div>    
+                </div>
+              </div>         
+            </div>
+          </div>
+       </div>
+    </div>
+<!-- END OF NAV-->
+
+<div id="background" style="position: absolute; background: url('miss.png'); height: 100vh; width: 100vw; opacity: .2;"> </div>
+    <div id="thesis" class="col-md-12">
+        <div class="chapter" style="padding-bottom: 0; margin-bottom: 60vh; ">
+            <h1>(Un)bounded:</h1>
+            <h2>Rethinking Borders with New Visualization Technologies</h2>    
+        </div>
+        
+        <div id="abstract" class="chapter section" style="padding-top: 10vh">
+            </br>
+            </br>
+            </br>
+            <h2>Abstract</h2>
+            </br>
+            <p style="font-size: 18px; text-align: center;">Western state cartography has produced the common understanding of "the border" as the line between two sovereign areas, but this simplistic view is now being challenged by practices of critical cartography and geography. Academics, activists, artists, and government institutions are developing new understandings of the border as multifaceted phenomena of performance, experience, movement, and conflict. These modern understandings require more complex methods of representation. This thesis investigates how new cartographic and visualization technologies can contribute to a new, more complex understanding of "the border."</p>
+        </div>
+        
+        <div id="00" class="chapter">
+            <h2>Preface</h2>
+            <div id="00-1" class="section">
+                </br>
+                <p>This thesis came about as a means to two separate ends. First, I wanted a chance to explore a deeply rooted interest in borders. This interest began in fifth grade, where our social studies curriculum included world geography. I remember thinking that the division of countries was so arbitrary and I wondered if we couldn't simply redraw them or abolish them all together. This led to several arguments with my classmates who were much more willing to accept the natural existence of borders than I was, but my skepticism persisted. While I never quite accepted that borders <i>needed</i> to exist, I never thought to question what exactly "the border" was until my second semester as a Geography major.</p>
+            
+                <p>In the Fall of 2012, I attended a presentation about the political enclaves and exclaves along the Indian-Bangladeshi border. The existence of these small land-locked islands made me question everything I <i>thought</i> I knew about sovereignty, territory, and borders. Regardless of their necessity or natural existence, I had always assumed these sorts of geographic entities were clear-cut. Sovereignties suddenly became blurry, and the lines that once divided them ceased to exist. At least, they ceased to exist in the way I had always assumed. I undertook this thesis with the hope of using my theoretical education in geography to answer a few of my personal questions about borders.</p>
+                
+                <p>I also undertook this thesis with the hope of researching and applying new digital mapping practices. My interest in interactive mapping developed out of frustration with the limits of traditional and often outdated GIS practices, and a desire to expand my spatial analysis and data communication toolsets. For the past year I have immersed myself in the world of web design, coding, and open source data in order to gain the skills I need to begin making the sort of digital cartographies that I imagine. Practicing and perfecting new my own technological skills became an important part of this project, thus while I could have relied solely on the (more advanced) work of others to conduct my analyses, I chose to build own examples. While my visualization examples might not be technically perfect, my understanding of the technologies I discuss is much deeper now that I have tried them out myself. </p>
+                
+                <p>In addition to borders and visualization technology, my fascination with and coursework in linguistics has been an influencing factor in the direction of this paper. Linguistics has impacted the way I think about discrete categorization and meaning, both of which are relevant not only to language but also to the discussion of mapping and borders. Not only do maps use language, but they are a sort of language of their own. Denis Wood, a cartographer and scholar whose ideas have greatly influenced my work, also uses linguistic theories as a way to understand how maps make meaning and myth. As Wood explains, "Every map is at once a synthesis of signs and a sign in itself," (Wood and Fels, 1986:54).</p>
+                
+                <p>Looking back on the process of this thesis, I have accomplished both the theoretical and technological goals I set out to achieve, but in ways I had never predicted. I learned that all borders, not just the borders of political enclaves, are complex and contradictory. I also learned that technology is not necessarily as important as perspective when trying to generate and communicate new understandings. </p>
+            
+            
+            </div>
+        </div>
+                
+        <div id="0" class="chapter">
+            <h2 id ="0">Introduction</h2>
+            <h1>MAPPING IT ALL OUT</h1>
+            </br>
+            </br>
+            </br>
+            <div id="0-1" class="section">
+                
+                <p>For centuries, borders have been thought of, and represented, as static, linear, and black-and-white, but recent studies and practices of critical cartography and geography are complicating this simplistic view. Just as cartography has been key in constructing this prevailing understanding of "the border", it can also challenge, disrupt, and supplant "the border." This thesis investigates how digital cartographic and visualization technologies can contribute to a new, more complex understanding of "the border."</p>
+            
+                <p>Before directly addressing this central question, it is important to explore what exactly the prevailing understanding of "the border" is and where this understanding came from. Chapter one identifies and problematizes the traditional explanation of the border as the line between two sovereign areas, and it traces the practice of bounding land back to the rise of the nation-state and the coterminous rise of Western state cartography. Chapter one also addresses why maps, by their propositional nature, are well positioned to create and enforce borders. </p>
+                
+                <p>Chapter Two then asks: Who/what is challenging the traditional understanding of the border, and where/how are these challenges being developed? It looks at a broad sample of cartographies that each approach and/or expose the border in different ways. The examples, which come from academics, activists, artists, and government institutions, serve as a survey of diverse border perspectives. Additionally, they provide glimpses into the different techniques and technologies that are being used to explore and expand the border. I do not argue that any particular understanding is better than the rest, but rather suggest that the border is made up of the culmination and co-occurrence of many understandings and the simultaneous spectacles that they produce.</p>
+                
+                <p>Chapter Three investigates how new cartographic and visualization technologies can help represent, produce, and explore a complex and multi-spectacled understanding of the border. Using my own work as examples, I present and evaluate the use of several digital technologies in border-related cartographies. Chapter three finds that interactivity, animation, customization, and multimedia integration make digital maps better suited than paper maps for the representation of multifaceted, multidimensional data. Additionally, the chapter confronts the assumption that spatial attributes necessarily have Cartesian locations, and it concludes that digital and paper cartographies alike should critically consider and accordingly represent the relationship between "the border" and Cartesian space.</p>
+                
+                <p>Borders are increasingly being understood as a complex phenomenon of performance, experience, movement, and conflict. While technology is not necessary for creating new understandings of "the border," it does support the sort of advanced and complex representations of space that new understandings of "the border" demand. I hope that this thesis can convince others to incorporate new visualization technologies into their attempts to overturn historical cartographic convention and redefine "the border" in meaningful ways.</p>
+            
+            
+            </div>
+        </div>
+        
+        <div id="1" class="chapter"></div>
+        
+        <div id="2" class="chapter"></div>
+        
+        <div id="3" class="chapter"></div>
+        
+        <div id="4" class="chapter">
+            <h2>Conclusion</h2>
+            <h1>SO THEN, WHAT <i>IS</i> "THE BORDER"?</h1>
+            </br>
+            </br>
+            </br>
+            <div id="4-1" class="section">
+                
+                <p>The conventional understanding of "the border" has been shaped by Western state cartography over the past several centuries. The rise of modern cartography and the development of the bounded nation-state are so closely intertwined, it is hard to say which phenomenon is more responsible for the other. Maps are powerful because they posture themselves as "representative" even though they are actually "productive." Using nothing but a thin ink line on paper, maps can, and have, invented borders that change lives and landscapes. Historically, maps have used their power to create and enforce a certain capitalist and state-ist perspective of the border as something that bounds land into fixed and ownable parcels. But cartography can also be used to present and produce new configurations of space and power, including the spaces and power of borders. </p>
+            
+                <p>New critical geographic studies of borders and migration are rethinking the dominant understanding of "the border" and what it means for flows of capital, ideas, and human lives. Western state cartography has framed "the border" as a wall, and although many critical geographers reject this interpretation, this understanding has produced a border spectacle with real physical impact on a place. Sometimes this impact is quite obvious, such as the installation of a fence, and other times it is less noticeable, such as the dead-end of a local road. Understanding "the border" as a "border regime" recognizes the actors, processes, and discourses that construct what looks like and acts as a "wall." These regime components include human migration, institutions of migration management, and sites and actors of conflict and resistance. An understanding of "the border" as a product of migration and migration management opens up new possibilities for the geographic location of the border. </p>
+                
+                <p>The externalization of border management practices and the decentralized impacts of those practices further modifies where we can claim "the border" physically exists. While the border can act as a wall of regulation and exclusion, some groups such as Hakitectura focus on the flows of capital, ideas, and culture that connect the spaces that others consider "divided" by "the border." The most progressive understanding of "the border" addressed in this paper accepts the border as a phenomenon composed of performance and experience. </p>
+                
+                <p>All of these new, multifaceted understandings of the border demand a new method of representation, and digital technology provides a modern and growing toolset with which to explore and visualize "the border." Interactive maps support the visualization of complex spatial and temporal components such as movement through space and time. Meanwhile dynamic maps allow users to explore and define landscapes via customization. But geographic visualizations in the digital age tend to look a lot like interactive versions of a static paper map, and they are equally as dependent on a Cartesian representation of space. Progressive understandings of "the border" as places of process and performance are not concerned with synthesizing a multitude of complex factors within a Cartesian space, but rather are concerned with transcending the Cartesian space all together. Limiting the visualization of these progressive viewpoints to a Cartesian map ultimately limits the viewpoints all together. These perspectives, therefore, demand methods of visualization that facilitate the exploration of space without tying it down to a Cartesian grid. While non-Cartesian spaces do not require digital visualization technologies, they can benefit from them. Most notably, interactive technology allows us to both gather and communicate more information at once.</p>
+                
+                <p>As a cartographer, my experimentation with new digital cartographic and visualization technologies has been radically informative. While I used to begin a project by determining on the best way to represent my subject in space,I now first question: <i>What is the real relationship between my subject and space?</i> I cannot help but imagine the academic and personal impact this relational understanding would have had on me if I had learned it in fifth grade instead of the state-ist and 'absolute' perspective that I was taught. I believe that unconventional and multifaceted representations of the border, which can be greatly aided by flexible and powerful digital toolsets, are the first step in overturning the simplistic and state-ist understanding of the border that has dominated for centuries. </p>
+                
+                <p>Our societal obsession with Scientific Truth makes us resistant to accept anything but a Cartesian coordinate pair as an answer to the question, <i>Where is the border</i>? This is an obstacle to unconventional- and in particular non-Cartesian- understandings of the border, but it is not an impossible hurdle. From Autism to sexuality to gender, things that were once considered discrete categories are increasingly considered spectrums. This progressive momentum gives me hope that borders, too, might someday be understood not simply as lines but as something with more dimensions. These dimensions might include history, performance, experience, power, conflict, as well as space. There are many dimensions to borders that I have left out, and even more that have not yet been discovered. From desert fences to global economies, borders have impact. The better we understand borders, the better we can understand the world around us. </p>
+
+
+            </div>
+        </div>
+        
+        
+    </div>
+
+  
+</body>
+
+<script>
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        $(".collapse").collapse();
+        $('#biblio').load('bibliography.html')
+        //$('#00').load('preface.html')
+        //$('#0').load('intro.html')
+        $('#1').load('ch1.html')
+        $('#2').load('ch2.html')
+        $('#3').load('ch3.html')
+        //$('#4').load('conclusion.html')
+
+    });
+    
+
+    function bodySize() {
+        if (document.getElementById('thesis').className == 'col-md-12') {
+            document.getElementById('thesis').className = 'col-md-9'
+        } else {
+            document.getElementById('thesis').className = 'col-md-12'
+        }
+    }
+    
+    function reveal() {  
+        document.getElementById('line').innerHTML = '<img src="http://www.radicalcartography.net/49th_cross.jpg" onclick=reveal2()>'
+    }
+    
+    function reveal2() {
+        console.log("clicked")
+        document.getElementById('line').innerHTML = '<img src="http://www.radicalcartography.net/49th.jpg">'
+    }
+    
+
+    
+    //// For Ch2
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#myTab a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTab a:first').tab('show') // Select first tab
+    $('#myTab a:last').tab('show') // Select last tab
+    $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+    
+    $('.carousel').carousel()
+    
+</script>
+</html>
